@@ -1,0 +1,22 @@
+version: "3.8"
+
+services:
+
+  backend:
+    container_name: nest_backend
+    image: nest_backend
+    build: ./backend
+    restart: always
+    volumes:
+      - /app/node_modules
+      - ./backend:/app
+    ports:
+      - 3000:3000
+    
+  frontend:
+    container_name: swifty_companion_frontend
+    image: swifty_companion_frontend
+    build: ./frontend
+    restart: always
+    ports:
+      - 4200:80
