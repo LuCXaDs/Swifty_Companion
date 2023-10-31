@@ -33,6 +33,11 @@ RUN flutter clean
 RUN flutter pub get
 RUN flutter build web
 
+# # Activate Hot Reload
+# RUN apt update && apt install -y cmake && apt install -y ninja-build
+# ENV CXX=/usr/bin/clang++
+# RUN flutter run
+
 # Once here, the app will be compiled and ready to deploy
 
 

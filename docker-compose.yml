@@ -7,9 +7,9 @@ services:
     image: nest_backend
     build: ./backend
     restart: always
-    volumes:
-      - /app/node_modules
-      - ./backend:/app
+    # volumes:
+    #   - /app/node_modules
+    #   - ./backend:/app
     ports:
       - 3000:3000
     
